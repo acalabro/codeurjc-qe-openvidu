@@ -186,7 +186,7 @@ public class OpenviduRecording extends RecordingBaseTest {
                 options.addArguments("--use-file-for-fake-audio-capture="
                         + "/opt/openvidu/fakeaudio.wav");
             } else {
-                String sutHost = System.getenv("ET_SUT_HOST");
+                String sutHost = System.getenv("ET_SUT_HOST_2");
 
                 completeUrl = "https://" + sutHost + ":5000?publicurl=https://"
                         + sutHost + ":4443/&secret=" + OPENVIDU_SECRET

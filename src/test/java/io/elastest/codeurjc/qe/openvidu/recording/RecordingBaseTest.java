@@ -91,7 +91,7 @@ public class RecordingBaseTest {
         /* ******** Openvidu Sut init ******** */
         /* *********************************** */
 
-        String sutHost = System.getenv("ET_SUT_HOST");
+        String sutHost = System.getenv("ET_SUT_HOST_2");
         String sutPort = System.getenv("ET_SUT_PORT");
         String sutProtocol = System.getenv("ET_SUT_PROTOCOL");
 
