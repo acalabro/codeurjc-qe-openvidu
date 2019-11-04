@@ -98,7 +98,10 @@ public class WebRtcBaseTest {
                     ? sutProtocol
                     : "https";
 
-            OPENVIDU_SUT_URL = sutProtocol + "://" + sutHost + ":" + sutPort;
+            OPENVIDU_SUT_URL = sutProtocol + "://" + 
+            		System.getenv("OPENVIDU_LOGIN_USERNAME") + ":" +
+            		System.getenv("OPENVIDU_LOGIN_PASSWORD") + "@" + 
+            		sutHost + ":" + sutPort;
             OPENVIDU_WEBAPP_URL = sutProtocol + "://" + sutHost;
         } else {
             throw new Exception("No Sut URL");
