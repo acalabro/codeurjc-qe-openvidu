@@ -18,10 +18,13 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.SessionNotCreatedException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.JsonArray;
@@ -294,6 +297,12 @@ public class OpenviduCheckWebRTC
         browserClient.getDriver()
         	.get(browserClient.getDriver().getCurrentUrl().substring(0, browserClient.getDriver().getCurrentUrl().length() - 19));
 
+        WebDriverWait wait = new WebDriverWait(browserClient.getDriver(), 10);  // you can reuse this one
+
+        WebElement elem = driver.findElement(By.id("test-btn"));
+        elem.click();
+        wait.until(ExpectedConditions.visibilityOf(elem));
+        
         browserClient.getDriver().findElement(By.tagName("test-btn")).click();
 
     }
