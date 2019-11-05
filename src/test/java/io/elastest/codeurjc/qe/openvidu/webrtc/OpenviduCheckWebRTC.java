@@ -304,7 +304,11 @@ public class OpenviduCheckWebRTC
         wait.until(ExpectedConditions.visibilityOf(elem));
         
         browserClient.getDriver().findElement(By.tagName("test-btn")).click();
+        
+        WebElement elem2 = driver.findElement(By.id("mat-input-1"));
+        elem2.sendKeys("MY_SECRET");
 
+        browserClient.getDriver().findElement(By.id("join-btn")).click();
     }
 
 }
