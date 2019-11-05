@@ -289,6 +289,11 @@ public class OpenviduCheckWebRTC
         
         Alert alert =browserClient.getDriver().switchTo().alert();
         alert.accept();
+        browserClient.getDriver()
+        .get(OPENVIDU_WEBAPP_URL + "?publicurl=" + publicUrl
+                + "&secret=" + OPENVIDU_SECRET + "&sessionId="
+                + SESSION_ID + "&userId=" + userId);
+
     }
 
 }
