@@ -14,6 +14,7 @@ import java.util.concurrent.TimeoutException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.SessionNotCreatedException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -285,7 +286,9 @@ public class OpenviduCheckWebRTC
                 .get(OPENVIDU_WEBAPP_URL + "?publicurl=" + publicUrl
                         + "&secret=" + OPENVIDU_SECRET + "&sessionId="
                         + SESSION_ID + "&userId=" + userId);
-
+        
+        Alert alert =browserClient.getDriver().switchTo().alert();
+        alert.accept();
     }
 
 }
