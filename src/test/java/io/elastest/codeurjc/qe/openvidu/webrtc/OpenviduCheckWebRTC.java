@@ -299,10 +299,18 @@ public class OpenviduCheckWebRTC
 
         WebDriverWait wait = new WebDriverWait(browserClient.getDriver(), 10);  // you can reuse this one
 
-        WebElement elem = driver.findElement(By.id("test-btn"));
-        elem.click();
-        wait.until(ExpectedConditions.visibilityOf(elem));
+        WebElement testbtn = driver.findElement(By.id("test-btn"));
+        testbtn.click();
+        wait.until(ExpectedConditions.visibilityOf(testbtn));
+      
+        waitTime(3000);
+   
+        WebElement text = driver.findElement(By.name("secret"));
+        text.sendKeys("MY_SECRET");
         
+        WebElement start = driver.findElement(By.id("join-btn"));
+        start.click();
+ 
        /* browserClient.getDriver().findElement(By.tagName("test-btn")).click();
         
         waitTime(2000);
