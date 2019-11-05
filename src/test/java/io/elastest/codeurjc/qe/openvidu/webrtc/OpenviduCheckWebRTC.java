@@ -303,17 +303,21 @@ public class OpenviduCheckWebRTC
         elem.click();
         wait.until(ExpectedConditions.visibilityOf(elem));
         
-        browserClient.getDriver().findElement(By.tagName("test-btn")).click();
+       /* browserClient.getDriver().findElement(By.tagName("test-btn")).click();
         
         waitTime(2000);
         WebElement elem2 = driver.findElement(By.id("secret"));
         wait.until(ExpectedConditions.visibilityOf(elem2));
         browserClient.getDriver().findElement(By.id("secret")).click();
+        elem2.sendKeys("MY_SECRET");
+
         waitTime(2000);
         browserClient.getDriver().findElement(By.tagName("secret")).click();
         elem2.sendKeys("MY_SECRET");
-        waitTime(2000);
-        browserClient.getDriver().findElement(By.id("join-btn")).click();
+        
+        waitTime(1000);
+        browserClient.getDriver().findElement(By.id("join-btn")).click();*/
+        
     }
 
     public void waitTime(long milliseconds) {
