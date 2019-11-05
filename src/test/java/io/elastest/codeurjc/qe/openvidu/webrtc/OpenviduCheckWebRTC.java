@@ -15,6 +15,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.SessionNotCreatedException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -292,6 +293,8 @@ public class OpenviduCheckWebRTC
         
         browserClient.getDriver()
         	.get(browserClient.getDriver().getCurrentUrl().substring(0, browserClient.getDriver().getCurrentUrl().length() - 19));
+
+        browserClient.getDriver().findElement(By.xpath("//button[contains(text(),'Test')]")).click();
 
     }
 
