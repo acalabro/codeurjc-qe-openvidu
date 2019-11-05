@@ -303,7 +303,7 @@ public class OpenviduCheckWebRTC
         testbtn.click();
         wait.until(ExpectedConditions.visibilityOf(testbtn));
       
-        waitTime(3000);
+        waitTime(1000);
    
         WebElement text = driver.findElement(By.name("secret"));
         text.sendKeys("MY_SECRET");
