@@ -294,7 +294,7 @@ public class OpenviduCheckWebRTC
         browserClient.getDriver()
         	.get(browserClient.getDriver().getCurrentUrl().substring(0, browserClient.getDriver().getCurrentUrl().length() - 19));
 
-        browserClient.getDriver().findElement(By.xpath("//button[contains(text(),'Test')]")).click();
+        browserClient.getDriver().findElement(By.tagName("test-btn")).click();
 
     }
 
