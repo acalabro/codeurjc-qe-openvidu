@@ -22,7 +22,6 @@ import org.slf4j.Logger;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.sun.tools.javac.util.Convert;
 
 import io.elastest.codeurjc.qe.openvidu.BrowserClient;
 import io.elastest.codeurjc.qe.openvidu.CountDownLatchWithException;
