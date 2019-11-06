@@ -22,6 +22,7 @@ import org.slf4j.Logger;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.sun.tools.javac.util.Convert;
 
 import io.elastest.codeurjc.qe.openvidu.BrowserClient;
 import io.elastest.codeurjc.qe.openvidu.CountDownLatchWithException;
@@ -76,7 +77,11 @@ public class WebRtcBaseTest {
         if (browserPollInterval != null) {
             BROWSER_POLL_INTERVAL = Integer.parseInt(browserPollInterval);
         }
-
+        
+        if (System.getenv("USERS_BY_SESSION") != null) {
+        	USERS_BY_SESSION = Integer.parseInt(System.getenv("USERS_BY_SESSION"));
+        }
+        
     }
 
     @BeforeAll
